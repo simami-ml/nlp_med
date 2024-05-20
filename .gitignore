@@ -165,5 +165,6 @@ cython_debug/
 
 **/.ipynb_checkpoints
 **/data/
+!/data/data/train_df_processed.csv
 **/notebooks/
 .DS_Store

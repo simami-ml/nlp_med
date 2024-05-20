@@ -166,3 +166,4 @@ cython_debug/
 **/.ipynb_checkpoints
 **/data/
 **/notebooks/
+.DS_Store

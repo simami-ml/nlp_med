@@ -1,4 +1,6 @@
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+import nltk
+nltk.download('punkt')
 from nltk.tokenize import sent_tokenize
 from dataload import dataload
 import warnings

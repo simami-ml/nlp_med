@@ -13,7 +13,7 @@ def inference(question):
     predict = model_m(question)
 
     N = 11
-    values_top = np.argsort(predict.reshape(-1))[::-1][:N]
+    values_top = np.argsort(predict.reshape(-1))[::-1][:N+1]
     res_df = pd.DataFrame(columns=['questions', 'translated_questions','cos_sim']) 
     
     for val in values_top:
@@ -25,7 +25,7 @@ def inference(question):
             translated_q = translate_text(q)
             res_df.loc[val] = [q,translated_q,cos_sim]
 
-    return translated_question, res_df.head()
+    return translated_question, res_df.iloc[1:]
 
 def main():
     question = dataload().sample().values[0]

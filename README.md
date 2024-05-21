@@ -22,5 +22,7 @@
 - сделаем демо приложение Streamlit
 
 Работа над данными проведена в ноутбуке -> [notebooks/COPY_med_q_pairs.ipynb](https://github.com/simami-ml/nlp_med/blob/main/notebooks/medical_questions.csv)
+
 Папка со скриптами python -> [src](https://github.com/simami-ml/nlp_med/tree/main/scr)
+
 Сервис на Streamlit -> [протестировать сервис](https://nlpmed-vbkkfcurgtswkusmh6bagg.streamlit.app "перейти") 

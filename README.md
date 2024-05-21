@@ -12,7 +12,7 @@
 **Цель проекта:** разработать сервис для поиска похожих вопросов.
 
 **Исходные данные:** набор пар медицинских вопросов с указанием, похожи ли они между собой.<br>
-[Посмотреть на датасет](https://huggingface.co/datasets/medical_questions_pairs "перейти") 
+[Датасет](https://huggingface.co/datasets/medical_questions_pairs "клац") 
 
 В ходе проекта:
 - изучили датасет
@@ -21,8 +21,8 @@
 - собрали baseline решение
 - сделали демо приложение Streamlit
 
-Работа над данными проведена в ноутбуке -> [посмотреть notebook](https://github.com/simami-ml/nlp_med/blob/main/notebooks/medical_questions.csv)
+Работа над данными проведена в ноутбуке -> [посмотреть notebook](https://github.com/simami-ml/nlp_med/blob/main/notebooks/medical_questions.csv 'клац')
 
-Папка со скриптами python -> [посмотреть код](https://github.com/simami-ml/nlp_med/tree/main/scr)
+Папка со скриптами python -> [посмотреть код](https://github.com/simami-ml/nlp_med/tree/main/scr 'клац')
 
-Сервис на Streamlit -> [протестировать сервис](https://nlpmed-vbkkfcurgtswkusmh6bagg.streamlit.app "перейти") 
+Сервис на Streamlit -> [протестировать сервис](https://nlpmed-vbkkfcurgtswkusmh6bagg.streamlit.app 'клац') 

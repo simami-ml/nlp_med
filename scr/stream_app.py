@@ -4,16 +4,16 @@ from prediction import inference
 import pandas as pd
 import time
 
-
 with st.sidebar:
     st.header('Similar medical questions')
     st.write('Here you can find similar questions on the medical topics')
 
-translate = st.radio('Need to translate?', options=['Yes','No'], index=1)
+default_translate = 1
+translate = st.radio('Need to translate?', options=['Yes','No'], index=default_translate)
 st.write("You selected:", translate)
 
-default_value = 5  
-val = st.slider('How many similar questions to output?', min_value=1, max_value=10, value=default_value)
+default_slider = 5  
+val = st.slider('How many similar questions to output?', min_value=1, max_value=10, value=default_slider)
 st.write('Qty questions:', val)
 
 if 'saved_input' not in st.session_state:
@@ -22,6 +22,7 @@ user_input = st.text_area('Here is your question:', st.session_state.saved_input
 st.session_state.saved_input = user_input
 
 col1, col2 = st.columns(2)
+
 with col1:
     click = st.button('Search')
 
@@ -41,8 +42,8 @@ if click:
 
     if translate == 'Yes':
         st.write('Translated question:', st.session_state.translated_question)
-        st.write(st.session_state.result_df.head(val).to_markdown(index=False), width=0, height=0)
+        st.write(st.session_state.result_df.head(val).to_markdown(index=False))
     else:
-        st.write(st.session_state.result_df.head(val).drop(columns='translated_questions').to_markdown(index=False), width=0, height=0)
+        st.write(st.session_state.result_df.head(val).drop(columns='translated_questions').to_markdown(index=False))
           
     

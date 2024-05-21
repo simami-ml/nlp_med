@@ -165,7 +165,8 @@ cython_debug/
 
 **/.ipynb_checkpoints
 **/data/
-!/data/train_df_processed.csv
+!/data/train_df.csv
 **/notebooks/
+!/notebooks/medical_questions.ipynb
 .DS_Store
 .devcontainer

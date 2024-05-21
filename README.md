@@ -21,7 +21,7 @@
 - собрали baseline решение
 - сделали демо приложение Streamlit
 
-Работа над данными проведена в ноутбуке -> [посмотреть notebook](https://github.com/simami-ml/nlp_med/blob/main/notebooks/medical_questions.csv 'клац')
+Работа над данными проведена в ноутбуке -> [посмотреть notebook](https://github.com/simami-ml/nlp_med/blob/main/notebooks/medical_questions.ipynb 'клац')
 
 Папка со скриптами python -> [посмотреть код](https://github.com/simami-ml/nlp_med/tree/main/scr 'клац')
 

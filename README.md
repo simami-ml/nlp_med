@@ -26,3 +26,6 @@
 Папка со скриптами python -> [посмотреть код](https://github.com/simami-ml/nlp_med/tree/main/scr 'клац')
 
 Сервис на Streamlit -> [протестировать сервис](https://nlpmed-vbkkfcurgtswkusmh6bagg.streamlit.app 'клац') 
+
+
+PS. Перевод на русский язык получился - обнять и плакать =)), но зато хорошо поднимает настроение=) Еще поработаю в этом направлении.

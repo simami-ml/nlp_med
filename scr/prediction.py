@@ -6,14 +6,14 @@ from model import model_m
 import warnings
 warnings.filterwarnings(action="ignore")
 
+questions = dataload()
 
 def inference(question):
-    questions = dataload()
+
     translated_question = translate_text(question)
     predict = model_m(question)
 
-    N = 11
-    values_top = np.argsort(predict.reshape(-1))[::-1][:N+1]
+    values_top = np.argsort(predict.reshape(-1))[::-1]
     res_df = pd.DataFrame(columns=['questions', 'translated_questions','cos_sim']) 
     
     for val in values_top:

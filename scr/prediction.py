@@ -8,12 +8,12 @@ warnings.filterwarnings(action="ignore")
 
 questions = dataload()
 
-def inference(question):
+def inference(question, N):
 
     translated_question = translate_text(question)
     predict = model_m(question)
 
-    values_top = np.argsort(predict.reshape(-1))[::-1]
+    values_top = np.argsort(predict.reshape(-1))[::-1][:N+1]
     res_df = pd.DataFrame(columns=['questions', 'translated_questions','cos_sim']) 
     
     for val in values_top:
@@ -29,7 +29,7 @@ def inference(question):
 
 def main():
     question = dataload().sample().values[0]
-    pred = inference(question)
+    pred = inference(question, 5)
     print(question, pred)
 
 if __name__ == '__main__':

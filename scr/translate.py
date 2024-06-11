@@ -1,27 +1,11 @@
-from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
-import nltk
-nltk.download('punkt')
-from nltk.tokenize import sent_tokenize
 from dataload import dataload
-import warnings
-warnings.filterwarnings(action="ignore")
+from deep_translator import GoogleTranslator
 
 def translate_text(text):
-    MAX_LENGTH = 100
-    NUM_BEAMS = 3
-    EARLY_STOP = True
 
-    tokenizer = AutoTokenizer.from_pretrained("Helsinki-NLP/opus-mt-en-ru")
-    model_translate = AutoModelForSeq2SeqLM.from_pretrained("Helsinki-NLP/opus-mt-en-ru")
+    translator = GoogleTranslator(source='en', target='ru')
 
-    sentences = sent_tokenize(text)
-    translated_sentences = []
-    for sentence in sentences:
-        inputs = tokenizer.encode(sentence, return_tensors="pt")
-        outputs = model_translate.generate(inputs, max_length=MAX_LENGTH, num_beams=NUM_BEAMS, early_stopping=EARLY_STOP)
-        translated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
-        translated_sentences.append(translated_text)
-    translated_text = " ".join(translated_sentences)
+    translated_text = translator.translate(text)
     
     return translated_text
 

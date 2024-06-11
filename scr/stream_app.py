@@ -33,7 +33,7 @@ if click:
     if 'result_df' not in st.session_state:
         with col2:
             with st.spinner('Searching...'):
-                translated_question, result_df = inference(st.session_state.saved_input, max_val+1)
+                translated_question, result_df = inference(st.session_state.saved_input, max_val+2)
                 st.session_state.result_df = result_df
                 st.session_state.translated_question = translated_question
     end_time = time.time()

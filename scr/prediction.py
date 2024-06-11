@@ -13,7 +13,7 @@ def inference(question, N):
     translated_question = translate_text(question)
     predict = model_m(question)
 
-    values_top = np.argsort(predict.reshape(-1))[::-1][:N]
+    values_top = np.argsort(predict.reshape(-1))[::-1][:N+2]
     res_df = pd.DataFrame(columns=['questions', 'translated_questions','cos_sim']) 
     
     for val in values_top:

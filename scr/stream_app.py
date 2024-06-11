@@ -13,9 +13,9 @@ translate = st.radio('Need to translate?', options=['Yes','No'], index=default_t
 st.write("You selected:", translate)
 
 default_slider = 5  
-min_value = 1
-max_value = 10
-val = st.slider('How many similar questions to output?', min_value=min_value, max_value=max_value, value=default_slider)
+min_val = 1
+max_val = 10
+val = st.slider('How many similar questions to output?', min_value=min_val, max_value=max_val, value=default_slider)
 st.write('Qty questions:', val)
 
 if 'saved_input' not in st.session_state:
@@ -33,7 +33,7 @@ if click:
     if 'result_df' not in st.session_state:
         with col2:
             with st.spinner('Searching...'):
-                translated_question, result_df = inference(st.session_state.saved_input, max_value)
+                translated_question, result_df = inference(st.session_state.saved_input, max_val+1)
                 st.session_state.result_df = result_df
                 st.session_state.translated_question = translated_question
     end_time = time.time()

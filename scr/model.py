@@ -4,10 +4,13 @@ from dataload import dataload
 import warnings
 warnings.filterwarnings(action="ignore")
 
+model_mlm = SentenceTransformer("paraphrase-MiniLM-L6-v2")
+questions = dataload()
+
 def model_m(question):
 
-    model_mlm = SentenceTransformer("paraphrase-MiniLM-L6-v2")
-    questions = dataload()
+    #model_mlm = SentenceTransformer("paraphrase-MiniLM-L6-v2")
+    #questions = dataload()
     questions_embeddings = model_mlm.encode(questions.tolist())
     question_embedding = model_mlm.encode(question)
     predict = np.array([util.cos_sim(questions_embeddings, question_embedding)])
@@ -18,4 +21,4 @@ def model_m(question):
 if __name__ == '__main__':
    
    question = dataload().sample().values[0]
-   print(model_m(question)[:5])
+   print(model_m(question))

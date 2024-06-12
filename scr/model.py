@@ -9,7 +9,6 @@ questions = dataload()
 questions_embeddings = model_mlm.encode(questions.tolist())
 
 def model_m(question):
-
     question_embedding = model_mlm.encode(question)
     predict = np.array([util.cos_sim(questions_embeddings, question_embedding)])
     

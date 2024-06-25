@@ -25,5 +25,5 @@
 
 Папка со скриптами python -> [посмотреть код](https://github.com/simami-ml/nlp_med/tree/main/scr 'клац')
 
-Сервис на Streamlit -> [протестировать сервис](https://nlpmed-vbkkfcurgtswkusmh6bagg.streamlit.app 'клац') 
+Пример работы сервиса на Streamlit -> [протестировать сервис](https://nlpmed-vbkkfcurgtswkusmh6bagg.streamlit.app 'клац') 
 
